@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-28T12:06:20.378Z",
+    "end": "2024-06-28T12:08:26.438Z",
+    "duration": 126060,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2081b633-a0a2-4a63-9419-e8aa7dbdbcf9",
+      "title": "",
+      "fullFile": "cypress/e2e/webtests/Health.spec.cy.js",
+      "file": "cypress/e2e/webtests/Health.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96fe4f36-ee79-43fb-8883-2a64f5662bf8",
+          "title": "Health Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Health Page Text",
+              "fullTitle": "Health Tests Verify Health Page Text",
+              "timedOut": null,
+              "duration": 123328,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const healthPage = new _HealthPage.default();\ncy.wait(10000);\nhealthPage.selectedDropDownPageText().then(pageTitle => {\n  cy.log(\"DropDownList: \" + pageTitle);\n  cy.readJSON(filePath).then(data => {\n    cy.log(\"SelectedDropDownText: \" + data.SelectedDropDownText);\n    expect(pageTitle).to.deep.equal(data.SelectedDropDownText);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {},
+              "uuid": "fd3d6e40-da25-4579-b21c-216d8dba0325",
+              "parentUUID": "96fe4f36-ee79-43fb-8883-2a64f5662bf8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd3d6e40-da25-4579-b21c-216d8dba0325"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 123328,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

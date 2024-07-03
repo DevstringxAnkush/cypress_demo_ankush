@@ -1,0 +1,209 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-06-28T12:08:34.217Z",
+    "end": "2024-06-28T12:12:50.717Z",
+    "duration": 256500,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65a80589-266f-47ee-8903-c3acd82219b0",
+      "title": "",
+      "fullFile": "cypress/e2e/webtests/NewPetTest.spec.cy.js",
+      "file": "cypress/e2e/webtests/NewPetTest.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+          "title": "New Pet Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should All pet Hover successfully And Verify Dropdownlist",
+              "fullTitle": "New Pet Tests Should All pet Hover successfully And Verify Dropdownlist",
+              "timedOut": null,
+              "duration": 22283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\nnewPetPage.clickOnPet(0);\nnewPetPage.mouseHoverNewPet();\nnewPetPage.petDropDownText().then(dropDownList => {\n  cy.log(\"DropDownList: \" + dropDownList);\n  cy.readJSON(filePath).then(data => {\n    expect(dropDownList).to.deep.equal(data.AllPetDropDownList);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {},
+              "uuid": "b87340ee-f108-4616-96bd-f557d9ca05e1",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Hover successfully And Verify Dog Dropdownlist",
+              "fullTitle": "New Pet Tests Should Hover successfully And Verify Dog Dropdownlist",
+              "timedOut": null,
+              "duration": 22372,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\nnewPetPage.clickOnPet(1);\nnewPetPage.mouseHoverNewPet();\nnewPetPage.petDropDownText().then(dropDownList => {\n  cy.log(\"DropDownList: \" + dropDownList);\n  cy.readJSON(filePath).then(data => {\n    expect(dropDownList).to.deep.equal(data.DogDropdownList);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {},
+              "uuid": "db4182a5-df73-4dd7-b751-2106e8a20e36",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should Hover successfully And Verify Cat Dropdownlist",
+              "fullTitle": "New Pet Tests should Hover successfully And Verify Cat Dropdownlist",
+              "timedOut": null,
+              "duration": 22188,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\nnewPetPage.clickOnPet(2);\nnewPetPage.mouseHoverNewPet();\nnewPetPage.petDropDownText().then(dropDownList => {\n  cy.log(\"DropDownList: \" + dropDownList);\n  cy.readJSON(filePath).then(data => {\n    expect(dropDownList).to.deep.equal(data.CatDropdownList);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {},
+              "uuid": "b398183d-7905-4a09-a1e9-1ef41f8f67db",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Selected All Pet DropdownText",
+              "fullTitle": "New Pet Tests Verify Selected All Pet DropdownText",
+              "timedOut": null,
+              "duration": 100385,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\n// newPetPage.clickOnContinueReading();\nnewPetPage.selectedPetDropDownPageText(0).then(page_Text_List => {\n  cy.log(\"=========text=========\" + page_Text_List);\n  cy.readJSON(filePath).then(data => {\n    expect(page_Text_List).to.deep.equal(data.SelectedDogAndCatDropDownPageText);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {},
+              "uuid": "7d28e0cc-04d5-430f-a73b-b9a1b0a9c1a0",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Selected Dog DropdownText",
+              "fullTitle": "New Pet Tests Verify Selected Dog DropdownText",
+              "timedOut": null,
+              "duration": 43181,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\n// newPetPage.clickOnContinueReading();\nnewPetPage.selectedPetDropDownPageText(1).then(page_Text_List => {\n  cy.log(\"=========text=========\" + page_Text_List);\n  cy.readJSON(filePath).then(data => {\n    expect(page_Text_List).to.deep.equal(data.SelectedDogDropDownPageText);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<div>DOGS</div>`\n\nis being covered by another element:\n\n`<div class=\"S_kq\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<div>DOGS</div>`\n\nis being covered by another element:\n\n`<div class=\"S_kq\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112445:68)\n    at ensureDescendents (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112496:5)\n    at ensureDescendentsAndScroll (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112502:14)\n    at ensureElIsNotCovered (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112633:5)\n    at runAllChecks (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112832:52)\n    at retryActionability (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112869:16)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143646:68)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143587:14)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://demo/./cypress/pages/NewPetPage.js:62:44)",
+                "diff": null
+              },
+              "uuid": "896cdf60-cbfa-400a-8959-3dcde2a8b377",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Selected Cat DropdownText",
+              "fullTitle": "New Pet Tests Verify Selected Cat DropdownText",
+              "timedOut": null,
+              "duration": 42938,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const newPetPage = new _NewPetPage.default();\ncy.wait(10000);\n// newPetPage.clickOnContinueReading();\nnewPetPage.selectedPetDropDownPageText(2).then(page_Text_List => {\n  cy.log(\"=========text========= \" + page_Text_List);\n  cy.readJSON(filePath).then(data => {\n    expect(page_Text_List).to.deep.equal(data.SelectedCatDropDownPageText);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<div>CATS</div>`\n\nis being covered by another element:\n\n`<div class=\"S_kq\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<div>CATS</div>`\n\nis being covered by another element:\n\n`<div class=\"S_kq\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112445:68)\n    at ensureDescendents (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112496:5)\n    at ensureDescendentsAndScroll (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112502:14)\n    at ensureElIsNotCovered (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112633:5)\n    at runAllChecks (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112832:52)\n    at retryActionability (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112869:16)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143646:68)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143587:14)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://demo/./cypress/pages/NewPetPage.js:62:44)",
+                "diff": null
+              },
+              "uuid": "29a2c614-3a22-4e41-93e1-df4a6fceac8f",
+              "parentUUID": "0c34d65c-a9e6-4193-bf2d-79a1d5314400",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b87340ee-f108-4616-96bd-f557d9ca05e1",
+            "db4182a5-df73-4dd7-b751-2106e8a20e36",
+            "b398183d-7905-4a09-a1e9-1ef41f8f67db",
+            "7d28e0cc-04d5-430f-a73b-b9a1b0a9c1a0"
+          ],
+          "failures": [
+            "896cdf60-cbfa-400a-8959-3dcde2a8b377",
+            "29a2c614-3a22-4e41-93e1-df4a6fceac8f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 253347,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+    {
+        "baseUrl" : "https://www.thewildest-stg.com/",
+    "email" : "automation24@wildest.co",
+    "password" : "qwerty123",
+        
+        "apiUrl" : "https://reqres.in/api"
+    }

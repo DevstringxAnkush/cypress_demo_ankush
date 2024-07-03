@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-28T12:05:59.008Z",
+    "end": "2024-06-28T12:06:18.980Z",
+    "duration": 19972,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7162111c-bbdd-4bad-8835-2a6f9d377334",
+      "title": "",
+      "fullFile": "cypress/e2e/webtests/BestInShow.cy.js",
+      "file": "cypress/e2e/webtests/BestInShow.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "91c6656b-0e40-4003-9046-df8aa33f73ff",
+          "title": "Best In Show Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Best In Show category Text",
+              "fullTitle": "Best In Show Tests Verify Best In Show category Text",
+              "timedOut": null,
+              "duration": 16932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const bestInShowPage = new _BestInShowPage.default();\ncy.wait(10000);\nbestInShowPage.mouseHoverShoppingNavBar();\nbestInShowPage.clickOnBestInShowDropDown();\nbestInShowPage.bestInShowCategoryText().then(categoryList => {\n  cy.log(\"DropDownList: \" + categoryList);\n  cy.readJSON(filePath).then(data => {\n    expect(categoryList).to.deep.equal(data.CategoryText);\n  });\n}).catch(error => {\n  // Handle any errors that might occur\n  console.error(error);\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.dblclick()` failed because this element is not visible:\n\n`<a class=\"F_gH\" aria-describedby=\"seo-new-window\" href=\"/pet-shopping/best-in-show-2023\">...</a>`\n\nThis element `<a.F_gH>` is not visible because its parent `<ul#shoppingMenu.dZ_y2>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.dblclick()` failed because this element is not visible:\n\n`<a class=\"F_gH\" aria-describedby=\"seo-new-window\" href=\"/pet-shopping/best-in-show-2023\">...</a>`\n\nThis element `<a.F_gH>` is not visible because its parent `<ul#shoppingMenu.dZ_y2>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:144856:58)\n    at Object.isStrictlyVisible (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:144870:10)\n    at runAllChecks (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112801:26)\n    at retryActionability (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:112869:16)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143646:68)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:143587:14)\n    at tryCatcher (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.thewildest-stg.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at BestInShowPage.clickOnBestInShowDropDown (webpack://demo/./cypress/pages/BestInShowPage.js:16:44)\n    at Context.eval (webpack://demo/./cypress/e2e/webtests/BestInShow.cy.js:15:27)",
+                "diff": null
+              },
+              "uuid": "d20b3546-eb93-46b8-9c46-541916c4864c",
+              "parentUUID": "91c6656b-0e40-4003-9046-df8aa33f73ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d20b3546-eb93-46b8-9c46-541916c4864c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

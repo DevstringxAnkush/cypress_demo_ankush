@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-06-28T12:08:27.749Z",
+    "end": "2024-06-28T12:08:32.916Z",
+    "duration": 5167,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3658ef2e-458a-40df-9b43-277a2a10c36e",
+      "title": "",
+      "fullFile": "cypress/e2e/webtests/Login.spec.cy.js",
+      "file": "cypress/e2e/webtests/Login.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8057390-d53a-47cd-84e8-efc0a80dfa0c",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log in successfully",
+              "fullTitle": "Login Tests should log in successfully",
+              "timedOut": null,
+              "duration": 2450,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const loginPage = new _LoginPage.default();\ncy.wait(5000);\nloginPage.enterUsername(_config.default.email);\nloginPage.enterPassword(_config.default.password);\nloginPage.clickSubmit();\ncy.wait(10000);\nloginPage.mouseHoverNewPet();",
+              "err": {
+                "message": "TypeError: loginPage.mouseHoverNewPet is not a function",
+                "estack": "TypeError: loginPage.mouseHoverNewPet is not a function\n    at Context.eval (webpack://demo/./cypress/e2e/webtests/Login.spec.cy.js:17:12)",
+                "diff": null
+              },
+              "uuid": "6978d71f-761a-4871-a3ac-b6342988d632",
+              "parentUUID": "c8057390-d53a-47cd-84e8-efc0a80dfa0c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6978d71f-761a-4871-a3ac-b6342988d632"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2450,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

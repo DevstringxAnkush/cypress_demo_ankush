@@ -1,0 +1,23 @@
+{
+  "AllPetDropDownList": ["kitten", "puppy", "Training", "Checklist", "All new pet"],
+  "DogDropdownList": ["puppy","Training","Checklist","All new pet"],
+  "CatDropdownList": ["kitten","Checklist","All new pet"],
+  "SelectedDogAndCatDropDownPageText": [
+		"kitten",
+		"puppy",
+		"Your Training Center",
+		"New Pet Checklist",
+		"New Pet"
+	],
+  "SelectedDogDropDownPageText": [
+		"puppy",
+		"Your Training Center",
+		"New Pet Checklist",
+		"New Pet"
+	],
+  "SelectedCatDropDownPageText": [
+		"kitten",
+		"New Pet Checklist",
+		"New Pet"
+	]
+}
